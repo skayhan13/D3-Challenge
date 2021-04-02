@@ -25,7 +25,7 @@ function yScale(data, chosenYAxis, chartHeight) {
     // Create scales.
     var yLinearScale = d3.scaleLinear()
         .domain([d3.min(data, d => d[chosenYAxis]) * .8,
-            d3.max(data, d => d[chosenYAxis]) * 1.2])
+            d3.max(data, d => d[chosenYAxis]) * 1.1])
         .range([chartHeight, 0]);
     return yLinearScale;
 }
@@ -114,8 +114,8 @@ function makeResponsive() {
         svgArea.remove();
     }
     //SVG params.
-    var svgHeight = window.innerHeight/1.2;
-    var svgWidth = window.innerWidth/1.7;
+    var svgHeight = window.innerHeight/1;
+    var svgWidth = window.innerWidth/1.3;
     // Margins.
     var margin = {
         top: 50,
